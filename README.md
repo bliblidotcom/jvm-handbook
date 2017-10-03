@@ -8,7 +8,7 @@ pengembang [blibli.com](https://www.blibli.com/) sebagai acuan untuk:
 2. melakukan *tuning* dari berbagai aspek dalam JVM, dan
 3. menjadi wadah referensi detil tentang JVM berbahasa Indonesia.
 
-Dokumen ini dikembangkan menggunakan [Sphinx-Doc](http://www.sphinx-doc.org/).
+Dokumen ini dikembangkan menggunakan [asciidoctor](http://asciidoctor.org).
 
 ## Akses Dokumen
 
@@ -22,14 +22,17 @@ Hasil kompilasi buku ini dapat dibaca pada:
 Untuk dapat membuat keluaran HTML dari dokumen ini, terlebih dahulu
 pastikan anda memiliki:
 
-* [Python 3](https://www.python.org/downloads/)
-* [Sphinx Doc](http://www.sphinx-doc.org/)
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [asciidoctor](http://www.asciidoctor.org/)
 
 Jalankan perintah berikut untuk membuat HTML dari sumber kode:
 
 ```bash
-$ make html
+$ asciidoctor source/index.adoc
 ```
+
+dan hasil dokumen dapat diakses pada `source/index.html`. Script 
+pembuatan PDF dan HTML yang baik akan dikembangkan sesegara mungkin.
 
 ## Kontribusi
 

@@ -1,0 +1,11 @@
+[[garbage-collection]]
+= Garbage Collection
+
+[partintro]
+--
+Belum ditulis
+--
+
+== Belum ditulis
+
+Belum ditulis

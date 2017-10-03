@@ -1,0 +1,14 @@
+= Referensi Java Virtual Machine (JVM)
+Blibli.com Research and Development
+v0.1, 2017-09
+:doctype: book
+:toc:
+:toclevels: 4
+:numbered:
+
+include::intro.adoc[]
+include::structure.adoc[]
+include::execution.adoc[]
+include::garbage-collection.adoc[]
+include::threading.adoc[]
+include::exception.adoc[]
