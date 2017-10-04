@@ -1,11 +1,23 @@
 [[garbage-collection]]
 = Garbage Collection
 
-[partintro]
---
-Belum ditulis
---
+Garbage Collection adalah sebuah fitur pada JVM yang mana berfungsi untuk mendaur ulang sampah sampah objek yang tidak terpakai yang berada di memory agar menjadi bisa digunakan lagi (bisa di reclaim memory), Garbage Collector sendiri masuk sebagai Key Hotspot Component pada JVM karena memang sangat berhubungan dengan Performa dan Tune Up sebuah aplikasi JVM.
 
-== Belum ditulis
+=== Fungsi dari fitur Garbage Collection
 
-Belum ditulis
+ * Membuat penggunaan memory menjadi ringan, karena Garbage Collector membuang objek yang tidak digunakan lagi dari memory
+ * Fungsi pertama telah dibuat otomatis oleh JVM :D
+
+=== Tipe Garbage Collector pada JVM
+
+==== 1. Serial Garbage Collector
+Serial Garbage Collector menggunakan 1 thread CPU untuk melakukan pekerjaan Garbage Collection, keunggulan fitur ini adalah efisiensi karena tidak ada hubungan antara 1 thread yang digunakan dengan thread lainnya, tipe Serial sendiri sangat cocok digunakan untuk mesin dengan single processor ataupun dengan aplikasi yang menggunakan data kurang dari 100MB, anda dapat mengaktifkan ini dengan menggunakan opsi `-XX:+UseSerialGC`
+
+==== 2. Parallel Garbage Collector
+Parallel Garbage Collector (dikenal juga dengan throughput collector) melakukan tugas Garbage Collecting dengan menggunakan multi threading, keunggulan dari tipe ini sendiri adalah dapat melakukan pekerjaan Garbage Collecting secara signifikan dan cepat, selain itu, tipe ini sangat cocok berjalan di mesin dengan dukungan multi threading (multi processor), anda dapat mengaktifkan ini dengan menggunakan opsi `XX:+UseParallelGC`
+
+==== 3. CMS Garbage Collector
+Concurrent Mark Sweep collector didesain untuk penggunaan garbage collecting dengan jeda jangka pendek, tipe ini sendiri dapat berbagi sumber daya CPU dengan Garbage Collector lainnya, namun cukup banyak masalah yang sering timbul dari tipe Garbage Collector ini
+
+==== 4. G1 Garbage Collector
+Tipe G1 sendiri dibuat sebagai pengganti dari tipe CMS, keunggulan yang bisa didapatkan dari tipe G1 antara lain adalah peningkatan performa yang lebih cepat dari 3 tipe Garbage Collector diatas.
