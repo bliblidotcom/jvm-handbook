@@ -1,7 +1,7 @@
 [[garbage-collection]]
 = Garbage Collection
 
-Garbage Collection adalah sebuah fitur pada JVM yang mana berfungsi untuk mendaur ulang sampah sampah objek yang tidak terpakai yang berada di memory agar menjadi bisa digunakan lagi (bisa di reclaim memory), Garbage Collector sendiri masuk sebagai Key Hotspot Component pada JVM karena memang sangat berhubungan dengan Performa dan Tune Up sebuah aplikasi JVM.
+Garbage Collection adalah sebuah fitur pada JVM (juga ada dalam bahasa pemrograman lain) yang mana berfungsi untuk mendaur ulang sampah sampah objek yang tidak terpakai yang berada di memory agar menjadi bisa digunakan lagi (bisa di reclaim memory), Garbage Collector sendiri masuk sebagai Key Hotspot Component pada JVM karena memang sangat berhubungan dengan Performa dan Tune Up sebuah aplikasi JVM.
 
 === Fungsi dari fitur Garbage Collection
 
